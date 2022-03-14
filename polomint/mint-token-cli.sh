@@ -38,8 +38,10 @@ cardano-cli transaction build \
     --mint "$v" \
     --mint-script-file $policyFile \
     --mint-redeemer-file testnet/unit.json \
+    --metadata-json-file testnet/token_meta.json \
     --change-address $addr \
     --protocol-params-file $ppFile \
+    --invalid-hereafter 52651890 \
     --out-file $unsignedFile \
 
 cardano-cli transaction sign \
