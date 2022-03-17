@@ -1,21 +1,24 @@
 {
       "721": {
-        "d06f24b44578729fbed8962de95aeacf6fa5b7b57b5ffa95d99b967f": {
-          "tPOLO": {
+        "522e41a329e33c81cfa6ee18ec279268c628bb64c2086543b1a7b677": {
+          "xPOLO": {
             "name": "Marco Polo",
     
-            "image": "ipfs://QmZGMbriwPD33qdhJFnLbfDFPRCpS3mPSddrhCAXYBgkmW", 
+            "image": "ipfs://QmSHtwzErY748vrNVaFZqme5Nysu2GJqgUMRhvL26db6fT", 
 	    "mediaType": "image/png",
 
 	    "description":"Marco Polo is the NFT Partnership Built on ADA Blockchain",
 
 	   "name": "Marco Polo",
-	   "symbol": "tPOLO",
+	   "symbol": "xPOLO",
 	   "tokenType": "token",
 	   "totalSupply": 100000000
         }
  
       },
+	  "publisher" :[
+		"https://testtoken.com/"
+	   ],
           "version": "1.0"
 
     }

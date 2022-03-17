@@ -15,12 +15,12 @@ Next, get into the "main" directory, in this case polomint.
 
 Next, we will edit the env.sh file to ensure it is connected to the node of interest and the correct file path.
 
-Next, edit the 'query-key1.sh' file so that it contains the correct .addr/.address file for your desired address. invoke $. query-key.sh to ensure the address's utxo appears. (you will need the TxHash and TxIx in the next step)
+Next, edit the 'query-key1.sh' file so that it contains the correct .addr/.address file for your desired address. invoke $./query-key.sh to ensure the address's utxo appears. (you will need the TxHash and TxIx in the next step)
 
 Now, we need to get into a nix-shell and run ($ cabal build)
 
 Next, run the command
-	$ cabal exec token-policy --policy.plutus your_txHash#your_TxIX desired_number_of_tokens desired_token_name
+	$ cabal exec token-policy -- policy.plutus your_txHash#your_TxIX desired_number_of_tokens desired_token_name
 	$ cat policy.plutus  
 
 Next, generate the policy.id for token. 
@@ -56,6 +56,6 @@ Now we will create the metadata for the token.
     }
 
 
-Finally, use the command $. mint-token-cli.sh your_txHash#your_TxIX desired_number_of_tokens desired_token_name testnet/your.addr testnet/your.skey 
+Finally, use the command $./mint-token-cli.sh your_txHash#your_TxIX desired_number_of_tokens desired_token_name testnet/your.addr testnet/your.skey 
 
 Tokens should mint if everything was done correctly!
