@@ -1,0 +1,18 @@
+{
+      "721": {
+        "5d5064291bafddb3657ab2bc43f9a5d1681a3ba58da894fd37e6ffdb": {
+          "testnft": {
+            "name": "Test NFT 2",
+  
+           "image": "ipfs://QmZkBCDz6YJtLKYwpALJMyZ865dPCGkswWqpWoYPofLqUX",
+	    "mediaType": "image/png",
+
+	    "description":"This is a test NFT for deadline testing"
+
+        }   
+ 
+      },
+          "version": "1.0"
+
+    }
+  }
