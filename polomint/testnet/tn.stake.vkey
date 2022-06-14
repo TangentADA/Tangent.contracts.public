@@ -1,5 +1,5 @@
 {
     "type": "PaymentExtendedVerificationKeyShelley_ed25519_bip32",
     "description": "",
-    "cborHex": "58402721c53c5e59c65bf9d709a6f3c2173dd64b04e7c42970ecf26ba95afb0deb8d3724a8cbf7331099f12223bb2837c55ecd024eb5dfc5a9b8ed77f6e3f5ff0189"
+    "cborHex": "stake vkey goes here"
 }
