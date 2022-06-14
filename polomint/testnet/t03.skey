@@ -1,5 +1,5 @@
 {
     "type": "PaymentExtendedSigningKeyShelley_ed25519_bip32",
     "description": "",
-    "cborHex": "5880b0f54af50d71dfad231ebf44dccf415d2800c411837feb1816a8f68c684d565b3b9ee0d0cdd5b3a4b4a498ec5159395d99d98b110052c45f12297d9a0e750b3cdcf1502ecc5071dd0e234f0df09395be7d16a584ff05ec975290dd24918de8499f3ea1b1cd563a16a8aa6dbdfd089c01b7cf85361b2e579c1340741248ee3f6d"
+    "cborHex": "t03 skey hex"
 }
