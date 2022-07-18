@@ -1,0 +1,172 @@
+cabal-version:      2.4
+name:               nftstaking
+version:            0.1.0.0
+synopsis:           NFT Staking for Tangent
+author:             Sydney Bright
+maintainer:         hello@tangent.art
+License:            Apache-2.0
+License-files:      LICENSE
+extra-source-files: CHANGELOG.md
+
+library
+  hs-source-dirs:      src
+  exposed-modules:    MainToken
+                    , SUtils 
+                    , Utils.OffChain
+                    , Utils.ScriptContext
+                    , Staking
+                    , Staking.Types
+                    , Staking.OnChain
+                    , Staking.OffChain
+                    , Staking.Validator
+                    , Staking.Tokens
+                    , Staking.Business
+                    , Staking.Business.User
+                    , Staking.Business.Pool
+                    , Staking.Business.Types
+  build-depends:       aeson
+                     , base ^>=4.14.1.0
+                     , bytestring
+                     , cardano-api
+                     , cardano-crypto-class
+                     , cardano-ledger-core
+                     , cardano-ledger-shelley
+                     , cardano-wallet-core
+                     , containers
+                     , data-default
+                     , freer-extras
+                     , openapi3
+                     , playground-common
+                     , plutus-contract
+                     , plutus-ledger
+                     , plutus-ledger-api
+		                 , plutus-chain-index
+   		               , plutus-chain-index-core
+                     , plutus-ledger-constraints
+                     , plutus-pab
+                     , plutus-tx-plugin
+                     , plutus-tx
+                     , plutus-use-cases
+                     , prettyprinter
+                     , serialise
+                     , text
+                    , lens
+  default-language:    Haskell2010
+  ghc-options:         -Wall -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -fno-spec-constr -fno-specialise
+
+
+
+test-suite test
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   test
+  main-is:          Main.hs
+  other-modules:      BCExplorer
+                    , Tests.BusinessTests
+                    , Tests.TestUtils
+                    , Tests.Tests
+                    , Tests.Attacks.AttackUtils
+                    , Tests.Attacks.Claim
+                    , Tests.Attacks.Compound
+                    , Tests.Attacks.Deposit
+                    , Tests.Attacks.Feed
+                    , Tests.Attacks.Withdraw
+                    , Tests.OnChain.Claim
+                    , Tests.OnChain.Compound
+                    , Tests.OnChain.Deposit
+                    , Tests.OnChain.Feed
+                    , Tests.OnChain.Withdraw
+                    , Tests.OffChain.Claim
+                    , Tests.OffChain.Compound
+                    , Tests.OffChain.Deposit
+                    , Tests.OffChain.Feed
+                    , Tests.OffChain.Register
+                    , Tests.OffChain.Start
+                    , Tests.OffChain.Unregister
+                    , Tests.OffChain.Withdraw
+                 -- , Tests.OffChain.UseCaseTests
+
+  default-language: Haskell2010
+  ghc-options:      -Wall -fobject-code -fno-ignore-interface-pragmas
+                        -fno-omit-interface-pragmas -fno-strictness
+                        -fno-spec-constr -fno-specialise
+  build-depends:      base ^>=4.14.1.0
+                    , aeson
+                    , ansi-terminal
+                    , containers
+                    , data-default
+                    , freer-extras
+                    , playground-common
+                    , plutus-pab
+                    , plutus-contract
+                    , plutus-ledger
+                    , plutus-ledger-api
+                    , plutus-tx-plugin
+                    , plutus-tx
+                    , plutus-use-cases
+                    , prettyprinter
+                    , plutus-ledger-constraints
+                    , text
+                    , freer-simple
+                    , lens <= 4.19.2
+                    , plutus-core
+                    , bytestring
+                    , tasty
+                    , tasty-hunit
+                    , QuickCheck
+                    , tasty-quickcheck
+                    , text
+                    , prettyprinter
+                    , strict-containers
+                    , nftstaking
+                    , foldl
+
+executable stake-policy
+  main-is: stake-policy.hs
+  hs-source-dirs:      app
+  ghc-options:         -Wall
+  build-depends:       base ^>= 4.14.1.0
+                     , nftstaking 
+                     , plutus-ledger
+                     , plutus-ledger-api
+                     , plutus-ledger-constraints
+                     , plutus-contract
+
+executable parse-data-user  
+  main-is: parse-data-mkuser.hs
+  hs-source-dirs:      app
+  ghc-options:         -Wall
+  build-depends:       base ^>= 4.14.1.0
+                     , nftstaking 
+                     , plutus-ledger
+                     , plutus-ledger-api
+                     , plutus-ledger-constraints
+                     , plutus-contract
+                     , aeson 
+                     , bytestring
+                     , utf8-string 
+                     , text
+                     , memory
+                     , time
+                     , cardano-api
+                     , plutus-tx 
+
+executable redeemer-withdraw 
+  main-is: redeemer-withdraw.hs
+  hs-source-dirs:      app
+  ghc-options:         -Wall
+  build-depends:       base ^>= 4.14.1.0
+                     , nftstaking 
+                     , plutus-ledger
+                     , plutus-ledger-api
+                     , plutus-ledger-constraints
+                     , plutus-contract
+                     , aeson 
+                     , bytestring
+                     , utf8-string 
+                     , text
+                     , memory
+                     , time
+                     , cardano-api
+                     , plutus-tx 
+                     
+                     

@@ -1,0 +1,3 @@
+#ignore cabal dist folder
+dist-newstyle/
+.env

@@ -1,0 +1,9 @@
+Make token policy :
+    $ cabal exec stake-policy [enter-name-here].policy 
+
+Generate Script Address:
+    $ cardano-cli address build --payment-script-file stake.policy --testnet-magic 1097911063  --out-file script.addr
+
+Make User Daturm:
+    $ ./make-user.sh your_txHash#your_TxIX desired_number_of_tokens_for_deposit testnet/your.addr testnet/your.skey 
+                to verify hash $ cardano-cli transaction hash-script-data --script-data-file datum-user.json
